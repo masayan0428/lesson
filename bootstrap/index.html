@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>news of the corona</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  //cssファイルの設定など
+  <!-- cssファイルの設定など /-->
   <style>
     div.img-hidden {
   height: 300px;
@@ -17,9 +17,9 @@ div.container-m {
 div.container-m {
   margin-top: 80px;
  }
-   div{
-     margin: 4px;
-   }
+   /* div{
+     margin: 4px 0px;
+   } */
   </style>
 </head>
 
@@ -58,12 +58,12 @@ div.container-m {
     </form>
   </div><!-- /.navbar-collapse -->
 </nav>
-<div class="container-fulied img-hidden">
-  <img src="dontstop.png" class="img-fulied">
+<div class="container-fulied img-hidden" style="background-image: url(dontstop.png); background-size:cover;">
+  <!-- <img src="dontstop.png" class="img-fulied"> -->
 </div>
 
 <div class="container container-m">
-  <div class="card-deck">
+  <div class="card-deck mb-3">
     <div class="card-img-top" src="mask.jpg" alt="マスクの画像">
      <div class="card-body">
         <h5 class="card-title">コロナウィルス</h5>
@@ -72,7 +72,9 @@ div.container-m {
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="mask.jpg" alt="Card image cap">
+      <div class="card-img-top" style="width:100%; height:150px; overflow:hidden;">
+        <img src="mask.jpg" alt="Card image cap" style="width:100%;" />
+      </div>
       <div class="card-body">
         <h5 class="card-title">衛星・健康関連</h5>
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -80,7 +82,9 @@ div.container-m {
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="netflix.jpg" alt="Card image cap">
+      <div class="card-img-top" style="width:100%; height:150px; overflow:hidden;">
+        <img src="netflix.jpg" alt="Card image cap" style="width:100%;" />
+      </div>
       <div class="card-body">
         <h5 class="card-title">娯楽関連</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -91,7 +95,7 @@ div.container-m {
   </div>
 
   <div class="container">
-   <div class="row">
+   <div class="row mb-3">
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">

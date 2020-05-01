@@ -2,123 +2,165 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>news of the corona</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- cssファイルの設定など /-->
-  <style>
-    div.img-hidden {
-  height: 300px;
-  overflow: hidden;
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>コロナウィルス</title>
+  <link rel="stylesheet" href="css/magnific-popup.css">
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function() {
+   $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false
+   });
+});
+</script>
+  <!--自作CSS -->
+<style type="text/css"><!--
+  /*ここに調整CSS記述*/
+  .jumbotron { background:url(dontstop.png) center no-repeat; background-size: cover; height:300px;}
+  -->
+  .btn-primary{
+    position: absolute;
+    top: 250px;
+  }
+  .messege {
+  position: absolute;/*絶対配置*/
+  color: yellow;/*文字は白に*/
+  top: 100px;
+  right: 30px;
+  font-weight: bold; /*太字に*/
+  font-size: 3em;/*サイズ2倍*/
+  }
+
+.example img {
+  width: 100%;
+  }
+  /**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
 }
-div.container-m {
-  margin-top: 80px;
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
 }
-div.container-m {
-  margin-top: 80px;
- }
-   /* div{
-     margin: 4px 0px;
-   } */
-  </style>
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+　</style>
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="netflix.jpg">news</a>
-  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+<body style="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">News of the CORONA</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="Navber">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+        <a class="nav-link" href="#">TOP <span class="sr-only">(現位置)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">USA</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ASIA
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">japan</a>
-          <a class="dropdown-item" href="#">china</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">その他</a>
-        </div>
+        <a class="nav-link" href="https://www.nytimes.com/">USA</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
+        <a class="nav-link" href="https://stopcovid19.metro.tokyo.lg.jp/">JAPAN</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
-      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
-    </form>
-  </div><!-- /.navbar-collapse -->
+  </div>
 </nav>
-<div class="container-fulied img-hidden" style="background-image: url(dontstop.png); background-size:cover;">
-  <!-- <img src="dontstop.png" class="img-fulied"> -->
-</div>
 
-<div class="container container-m">
-  <div class="card-deck mb-3">
-    <div class="card-img-top" src="mask.jpg" alt="マスクの画像">
-     <div class="card-body">
-        <h5 class="card-title">コロナウィルス</h5>
-        <p class="card-text">test</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="messege">
+        <p>コロナに負けるな！</p>	
+      </div>
+      <a href="https://corona.go.jp/" class="btn btn-primary">最新情報</a>
+    </div><!-- /.container -->
+  </div><!-- /.jumbotron -->
+
+  <div class="card-deck mt-10 mr-5 ml-5">
+    <div class="card">
+      <img class="card-img-top" src="netflix.jpg" style="height:400px; alt="ネットフリックスの画像">
+      <div class="card-body">
+        <a href="https://www3.nhk.or.jp/news/html/20200422/k10012399941000.html" class="btn btn-primary">巣ごもり特需</a>
+        <p class="card-text">好調なネットフリックス</p>
+        <p class="card-text"><small class="text-muted">最終更新3分前</small></p>
       </div>
     </div>
     <div class="card">
-      <div class="card-img-top" style="width:100%; height:150px; overflow:hidden;">
-        <img src="mask.jpg" alt="Card image cap" style="width:100%;" />
-      </div>
+      <img class="card-img-top" src="mask.jpg" style="height:400px; alt="マスクの画像">
       <div class="card-body">
-        <h5 class="card-title">衛星・健康関連</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <a href="https://note.com/seikeitohoku/n/n6d1fe03e6b64" class="btn btn-primary">アベノマスク</a>
+        <p class="card-text">謎の発注先</p>
+        <p class="card-text"><small class="text-muted">最終更新3分前</small></p>
       </div>
     </div>
-    <div class="card">
-      <div class="card-img-top" style="width:100%; height:150px; overflow:hidden;">
-        <img src="netflix.jpg" alt="Card image cap" style="width:100%;" />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">娯楽関連</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
   </div>
 
-  <div class="container">
-   <div class="row mb-3">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">コロナショック</h5>
-          <p class="card-text">景気回復</p>
-          <a href="#" class="btn btn-primary">詳しくはこちら</a>
-        </div>
+  <a class="popup-youtube" href="https://www.youtube.com/watch?v=BiGWVklFFDw">Open YouTube video</a>
+
+  　<div class="container">
+    <table class="table table-striped">
+      <div class="mt-5"></div>
+      <tr><th>最新感染者数</th><th>人数</th></tr>
+      <tr><td>東京</td><td>100</td></tr>
+      <tr><td>大阪</td><td>50</td></tr>
+      <tr><td>愛知</td><td>30</td></tr>
+    </table>
+  </div>
+
+   <div class="container">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal1">
+  youtube
+</button>
+<div class="modal fade" id="modal1" tabindex="-1"
+      role="dialog" aria-labelledby="label1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+  　<div class="modal-content">
+      <a href="https://www.youtube.com/watch?v=oA99TQGtSd0">Open YouTube video</a>
+      <div class="modal-header">
+        <h5 class="modal-title" id="label1">世界のコロナ情報</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">コロナウィルス</h5>
-          <p class="card-text">景気後退</p>
-          <a href="#" class="btn btn-primary">詳しくはこちら</a>
-        </div>
+      <div class="modal-body">
+        ロシア首相が感染
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info">OK</button>
       </div>
     </div>
   </div>
 </div>
-</div>
+   </div>
 
-  
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

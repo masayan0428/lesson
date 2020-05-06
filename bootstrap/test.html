@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="jquery-3.5.0.min.js"></script>
     <style>
-        .btn{
-            margin:20;
+        .content{
+            display: none;
         }
+       
     </style>
 </head>
 <body>
-    <div class="button">
-    <!-- Primary -->
-　　 <button type="button" class="btn btn-primary">OPEN</button>
-     </div>
-     <p class="p" style="display: none;">hi</p>
+   <div class="container mt-5">
+       <button class="btn btn-info">open</button>
+   </div>
 
-    <script>
-        $(function() {
-    $(".btn").click(function() {
-        $(".p").show();
-    });
-    </script>
+   <div class="content">
+       <p>test</p>
+       <p>test</p>
+   </div>
+  
+   <script>
+       $(".btn").click(function(){
+           $(".content").show();
+       });
+   </script>
 </body>
 </html>

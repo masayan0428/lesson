@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>jquery</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.5.0.min.js"></script>
     <style>
         .content{
             display: none;
@@ -13,9 +13,11 @@
     </style>
 </head>
 <body>
-   <div class="container mt-5">
-       <button class="btn btn-info">open</button>
-   </div>
+
+    <div class="container mt-5">
+        <button class="btn btn-info">open</button>
+    </div>
+   
 
    <div class="content">
        <p>test</p>
@@ -23,9 +25,24 @@
    </div>
   
    <script>
-       $(".btn").click(function(){
-           $(".content").show();
+    $(function(){
+        /* 処理ここから */
+        $(".btn").click(function(){
+           //$(".content").show();
+           $(".content").toggle();
+           /*
+           if($(".content").is(":visibled")){
+            $(".content").hide();
+           }else{
+            $(".content").show();
+           }
+           */
        });
+       /* 処理ここまで */
+    });   
    </script>
+
+    
+
 </body>
 </html>

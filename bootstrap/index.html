@@ -1,4 +1,4 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -10,10 +10,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <!--自作CSS -->
-<style type="text/css"><!--
+<style type="text/css">
   /*ここに調整CSS記述*/
-  .jumbotron { background:url(dontstop.png) center no-repeat; background-size: cover; height:350px;}
-  -->
+  .jumbotron { 
+    background:url(./img/dontstop.png) center no-repeat; 
+    background-size: cover; 
+    height:350px;
+  }
+
   .btn-primary{
     position: absolute;
     top: 300px;
@@ -30,10 +34,10 @@
 　</style>
 </head>
 
-<body style="container">
+<body class="top-page">
   <nav class="navbar navbar-expand-lg navbar-light bg-info">
   <a class="navbar-brand" href="https://www.who.int/">News of the CORONA</a>
-  <img src="dontstop.png" width="30" height="30" class="d-inline-block align-top" alt="dontstop">
+  <img src="./img/dontstop.png" width="30" height="30" class="d-inline-block align-top" alt="dontstop">
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -63,7 +67,7 @@
 
   <div class="card-deck mt-10 mr-5 ml-5">
     <div class="card">
-      <img class="card-img-top" src="netflix.jpg" style="height:400px; alt="ネットフリックスの画像">
+      <img class="card-img-top" src="./img/netflix.jpg" style="height: 400px;" alt="ネットフリックスの画像">
       <div class="card-body">
         <a href="https://www3.nhk.or.jp/news/html/20200422/k10012399941000.html" class="btn btn-primary">巣ごもり特需</a>
         <p class="card-text">好調なネットフリックス</p>
@@ -71,7 +75,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="mask.jpg" style="height:400px; alt="マスクの画像">
+      <img class="card-img-top" src="./img/mask.jpg" style="height: 400px;" alt="マスクの画像">
       <div class="card-body">
         <a href="https://note.com/seikeitohoku/n/n6d1fe03e6b64" class="btn btn-primary">アベノマスク</a>
         <p class="card-text">謎の発注先</p>
